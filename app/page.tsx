@@ -1,24 +1,14 @@
 import { BlogPosts } from 'app/components/posts'
+import { Navbar } from './components/nav'
 
-export default function Page() {
+export default function Home() {
   return (
     <section>
-      {/* <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        George Howard
-      </h1>
-      <h6 className="mb-8 text-l font-semibold tracking-tighter">
-        Software Developer / Tinkerer / Creative
-      </h6>
-      <p className="mb-4">
-        {`I like building things, and figuring out how they work.`}
-      </p>
-      <div className="my-8">
-      </div> */}
-
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+      <h1 className="text-5xl font-semibold tracking-tighter mt-[35%]">
         Hey, I'm George.<br />
         I build software and occasionally break cars.
       </h1>
+      <Navbar />
       <div className="my-8">
       </div>
     </section>
