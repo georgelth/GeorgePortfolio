@@ -10,7 +10,7 @@ export default function About() {
       <div className='mb-14'>
         <h1 className="font-sans text-5xl font-bold tracking-tighter">about</h1>
         <p className='font-mono text-xl tracking-tight mt-8'>
-          Hey, I'm George. I'm a recent graduate from Tennessee Tech University with a degree in Computer Science. I have a passion for web development and enjoy creating user-friendly and visually appealing websites. In my free time, I like to explore new technologies and work on personal projects to enhance my skills.
+          Hey, I'm George. I'm a 2026 graduate from Tennessee Tech University with a B.S. in Computer Science and a minor in Mathematics. I have a passion for software development and balancing creativity with practical use. I strive to continue building my skillsets every day in an ever-changing environment.
         </p>
       </div>
       <div className='mb-14'>
