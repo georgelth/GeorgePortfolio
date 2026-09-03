@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const navItems = {
   '/': {
-    name: '/home',
+    name: '/~',
   },
   '/about': {
     name: '/about',
@@ -26,7 +26,7 @@ export function Navbar() {
     <aside className="-ml-[8px] mb-16 mt-2 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="text-3xl flex items-center justify-center flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          className="font-mono text-3xl flex items-center justify-center flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">

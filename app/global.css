@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+.font-sans {
+  font-family: var(--font-geist-sans);
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains-mono);
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
