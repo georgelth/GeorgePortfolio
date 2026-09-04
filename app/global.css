@@ -2,10 +2,12 @@
 
 .font-sans {
   font-family: var(--font-geist-sans);
+  letter-spacing: var(--letter-spacing-tighter, -0.05em);
 }
 
 .font-mono {
   font-family: var(--font-jetbrains-mono);
+  letter-spacing: var(--letter-spacing-tight, -0.025em);
 }
 
 ::selection {
