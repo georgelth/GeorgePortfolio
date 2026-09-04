@@ -19,7 +19,7 @@ export default function Photos() {
           </p>
         </div>
 
-        <section className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4">
+        <section className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-3">
           {photos.map((photo) => (
             <figure
               key={photo.src}
