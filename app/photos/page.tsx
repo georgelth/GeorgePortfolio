@@ -5,12 +5,13 @@ import { photos } from './data'
 export default function Photos() {
   return (
     <main>
-      <div className="relative left-1/2 mb-14 w-[calc(100vw-2rem)] max-w-7xl -translate-x-1/2 lg:w-[calc(100vw-12rem)]">
+      <div className="relative left-1/2 w-[calc(100vw-2rem)] max-w-8xl -translate-x-1/2 lg:w-[calc(100vw-12rem)] mb-14">
         <Navbar />
 
         <div className="mb-14 max-w-4xl">
           <h1 className="font-sans text-5xl font-bold">
             photos
+            <span className='font-mono text-[42px] text-neutral-600 ml-3'>{`[${photos.length}]`}</span>
           </h1>
 
           <p className="mt-8 font-mono text-xl">
