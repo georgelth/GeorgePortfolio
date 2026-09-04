@@ -1,44 +1,7 @@
 import Image from 'next/image'
 import { Navbar } from '../components/nav'
-
-const projects = [
-  {
-    title: 'Personal Portfolio',
-    description: 'The website you\'re looking at right now!',
-    image: '/projects/pulse-analytics.png',
-    tags: ['Next.js', 'TypeScript'],
-  },
-  {
-    title: 'CampusWatch',
-    description: 'A friendly mobile experience to help college students stay on track.',
-    image: '/projects/habit-loop.png',
-    tags: ['Ionic', 'TypeScript', 'Node.js', 'Java', 'MySQL'],
-  },
-  {
-    title: 'HippoExchange',
-    description: 'A Facebook Marketplace alternative',
-    image: '/projects/devflow-cli.png',
-    tags: ['Dart', 'Flutter', 'Node.js', 'MySQL'],
-  },
-  {
-    title: 'LearnSpace',
-    description: 'An accessible learning platform that keeps courses, lessons, and progress in one place.',
-    image: '/projects/learnspace.png',
-    tags: ['Next.js', 'PostgreSQL'],
-  },
-  {
-    title: 'Particle Field',
-    description: 'An interactive experiment that turns live data into a responsive particle system.',
-    image: '/projects/particle-field.png',
-    tags: ['WebGL', 'Three.js'],
-  },
-  {
-    title: 'Ledger',
-    description: 'A personal finance dashboard designed to make spending patterns easier to understand.',
-    image: '/projects/ledger.png',
-    tags: ['React', 'Data Viz'],
-  },
-]
+import Link from 'next/link'
+import { projects } from './data'
 
 export default function Projects() {
   return (
@@ -60,35 +23,40 @@ export default function Projects() {
           className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <article key={project.title} className="group">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} project preview`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
-                />
-              </div>
-              <div className="mt-4">
-                <h2 className="font-sans text-xl font-semibold">
-                  {project.title}
-                </h2>
-                <p className="font-mono mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
-                  {project.description}
-                </p>
-                <ul className="mt-3 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
-                  {project.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full border border-neutral-200 px-2.5 py-1 font-mono text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-400"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </article>
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className="group block rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+              <article key={project.title} className="group">
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} project preview`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                  />
+                </div>
+                <div className="mt-4">
+                  <h2 className="font-sans text-xl font-semibold">
+                    {project.title}
+                  </h2>
+                  <p className="font-mono mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+                    {project.description}
+                  </p>
+                  <ul className="mt-3 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-full border border-neutral-200 px-2.5 py-1 font-mono text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-400"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </Link>
           ))}
         </section>
       </div>
