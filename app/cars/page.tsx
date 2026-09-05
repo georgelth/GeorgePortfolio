@@ -58,33 +58,30 @@ export default function Cars() {
             <p> My philosophy is still form &gt; function. I'm willing to sacrifice some practicality for the look I want, but never enough that the car stops being enjoyable. A happy medium is what I'm after: something inspired by the tuner culture I grew up loving, something unmistakably mine, and something I can still grab the keys to and drive.
             </p>
           </div>
-          <aside aria-label="About the car" className="border-t border-neutral-200 pt-5 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 dark:border-neutral-800">
+          <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t border-neutral-200 pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 dark:border-neutral-800">
             <Image
               src="/cars/miata-overlook.png"
               alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
               width={1536}
               height={1024}
-              priority
-              sizes="(max-width: 1024px) 100vw, 896px"
-              className="aspect-[3/2] w-full object-cover sm:aspect-[16/9]"
+              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              className="aspect-square h-auto w-[95%] object-cover"
             />
             <Image
-              src="/cars/miata-overlook.png"
-              alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
+              src="/cars/miata-wheel.png"
+              alt="AI-generated sample: silver wheel and fender detail illustrating the Miata’s fitment"
               width={1536}
               height={1024}
-              priority
-              sizes="(max-width: 1024px) 100vw, 896px"
-              className="aspect-[3/2] w-full object-cover sm:aspect-[16/9]"
+              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              className="aspect-square h-auto w-[95%] object-cover"
             />
             <Image
-              src="/cars/miata-overlook.png"
-              alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
+              src="/cars/miata-drive.png"
+              alt="AI-generated sample: a silver Miata parked beside a winding forest road"
               width={1536}
               height={1024}
-              priority
-              sizes="(max-width: 1024px) 100vw, 896px"
-              className="aspect-[3/2] w-full object-cover sm:aspect-[16/9]"
+              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              className="aspect-square h-auto w-[95%] object-cover"
             />
           </aside>
         </div>
