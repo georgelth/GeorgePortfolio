@@ -5,8 +5,8 @@ import { photos } from './data'
 export default function Photos() {
   return (
     <main>
-      <div className="relative left-1/2 w-[calc(100vw-2rem)] max-w-8xl -translate-x-1/2 lg:w-[calc(100vw-12rem)] mb-14">
-        <Navbar />
+      <Navbar />
+      <div className="relative left-1/2 w-[calc(100vw-2rem)] max-w-8xl -translate-x-1/2 lg:w-[calc(100vw-12rem)] my-12">
 
         <div className="mb-14 max-w-4xl">
           <h1 className="font-sans text-5xl font-bold">
@@ -24,7 +24,7 @@ export default function Photos() {
           {photos.map((photo) => (
             <figure
               key={photo.src}
-              className="mb-4 break-inside-avoid overflow-hidden rounded-xl"
+              className="mb-4 break-inside-avoid overflow-hidden"
             >
               <Image
                 src={photo.src}
