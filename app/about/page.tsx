@@ -1,6 +1,7 @@
 import { Navbar } from '../components/nav'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
+import { SectionText } from 'app/components/typeanimation'
 import Image from 'next/image'
 
 export default function About() {
@@ -8,7 +9,9 @@ export default function About() {
     <main>
       <Navbar />
       <div className='my-12'>
-        <h1 className="font-sans text-5xl font-bold tracking-tighter">about</h1>
+        <h1 className="font-sans text-5xl font-bold tracking-tighter">
+          <SectionText title='about'/>
+        </h1>
         <p className='font-mono text-xl tracking-tight mt-8'>
           Hey, I'm George. I'm a 2026 graduate from Tennessee Tech University with a B.S. in Computer Science and a minor in Mathematics. I have a passion for software development and balancing creativity with practical use. I strive to continue building my skillsets every day in an ever-changing environment.
         </p>

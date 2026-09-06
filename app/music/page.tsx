@@ -2,13 +2,16 @@ import { Navbar } from "app/components/nav"
 import Image from "next/image"
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
+import { SectionText } from "app/components/typeanimation"
 
 export default function Music(){
   return(
     <main>
       <Navbar />
       <div className='my-12'>
-        <h1 className="font-sans text-5xl font-bold tracking-tighter">music</h1>
+        <h1 className="font-sans text-5xl font-bold tracking-tighter">
+          <SectionText title='music'/>
+        </h1>
         <p className='font-mono text-xl tracking-tight mt-8'>
           This is my 2003 "NB2" Mazda Miata. I bought this car in heat of summer &apos;23.
         </p>

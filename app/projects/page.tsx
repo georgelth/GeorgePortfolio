@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Navbar } from '../components/nav'
 import Link from 'next/link'
 import { projects } from './data'
+import { SectionText } from 'app/components/typeanimation'
 
 export default function Projects() {
   return (
@@ -10,7 +11,7 @@ export default function Projects() {
       <div className="relative left-1/2 w-[calc(100vw-2rem)] max-w-8xl -translate-x-1/2 lg:w-[calc(100vw-12rem)] my-12">
         <div className="mb-14 max-w-4xl">
           <h1 className="font-sans text-5xl font-bold">
-            projects
+            <SectionText title='projects'/>
             <span className='font-mono text-[42px] text-neutral-600 ml-3'>{`[${projects.length}]`}</span>
           </h1>
           <p className="mt-8 font-mono text-xl">

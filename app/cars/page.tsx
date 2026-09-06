@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
 import { Navbar } from 'app/components/nav'
 import { buildDetails, drivingPhotos, partsList } from './data'
+import { SectionText } from 'app/components/typeanimation'
 
 export const metadata: Metadata = {
   title: { absolute: 'cars' },
@@ -21,7 +22,9 @@ export default function Cars() {
       <Navbar />
 
       <header className="mb-10 mt-12">
-        <h1 className="font-sans text-5xl font-bold tracking-tighter">cars</h1>
+        <h1 className="font-sans text-5xl font-bold tracking-tighter">
+          <SectionText title='cars'/>
+        </h1>
         <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight">
           This is my 2003 Mazda Miata, a project I bought in the heat of summer
           &apos;23. An ongoing project, and a good excuse to step away from a screen.
