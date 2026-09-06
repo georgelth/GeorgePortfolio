@@ -12,7 +12,7 @@ export default function Projects() {
         <div className="mb-14 max-w-4xl">
           <h1 className="font-sans text-5xl font-bold">
             <SectionText title='projects'/>
-            <span className='font-mono text-[42px] text-neutral-600 ml-3'>{`[${projects.length}]`}</span>
+            <span className='font-mono text-[42px] text-neutral-600 ml-3'>{`[${String(projects.length).padStart(2, '0')}]`}</span>
           </h1>
           <p className="mt-8 font-mono text-xl">
             A selection of things I&apos;ve designed and built, balancing useful software with thoughtful interaction.

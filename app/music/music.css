@@ -1,0 +1,58 @@
+﻿/* Small additions to the shared portfolio layout. Colors follow the site theme. */
+.music-page {
+  --music-line: #e5e5e5;
+  --music-muted: #525252;
+  --music-hover: #f5f5f5;
+}
+
+.music-page .music-muted { color: var(--music-muted); }
+.music-page button { color: inherit; cursor: pointer; font: inherit; }
+.music-page button:disabled { cursor: default; }
+.music-page button:focus-visible,
+.music-page input:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.music-section-heading { display: flex; align-items: baseline; gap: 15px; }
+.music-signal { margin: 32px 0 0; border-top: 1px solid var(--music-line); border-bottom: 1px solid var(--music-line); }
+.music-signal-label { display: flex; justify-content: space-between; gap: 12px; font-size: 11px; padding: 16px 0; }
+.music-signal-label button { border: 0; background: none; padding: 0; }
+.music-signal-label button:hover:not(:disabled) { text-decoration: underline; text-underline-offset: 4px; }
+.music-page .signal-canvas { display: block; width: 100%; height: 180px; }
+.music-transport { display: flex; align-items: center; gap: 20px; padding: 22px 0; }
+.music-play { display: inline-flex; align-items: center; gap: 10px; background: none; border: 1px solid var(--music-line); border-radius: 3px; padding: 9px 16px; font-size: 14px !important; }
+.music-play:hover:not(:disabled) { background: var(--music-hover); }
+.music-play:disabled { opacity: .4; }
+.music-transport-note { font-size: 11px; }
+.music-tracks { border-top: 1px solid var(--music-line); }
+.music-track { display: grid; grid-template-columns: 26px minmax(0, 1fr) 32px 16px; align-items: center; gap: 16px; width: 100%; text-align: left; padding: 18px 10px; border: 0; border-bottom: 1px solid var(--music-line); background: none; font-size: 13px !important; }
+.music-track:hover { background: var(--music-hover); }
+.music-track-name { text-underline-offset: 5px; overflow-wrap: anywhere; }
+.music-track[aria-pressed='true'] .music-track-name { text-decoration: underline; }
+.music-track-marker { text-align: right; }
+.music-track[aria-pressed='false'] .music-track-marker { opacity: .35; }
+.music-current-title { min-width: 0; overflow-wrap: anywhere; }
+.music-time { white-space: nowrap; }
+.music-progress { display: block; width: 100%; height: 16px; margin: 0 0 10px; appearance: none; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.music-progress::-webkit-slider-runnable-track { height: 2px; background: var(--music-line); }
+.music-progress::-webkit-slider-thumb { appearance: none; width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin-top: -2px; }
+.music-progress::-moz-range-track { height: 2px; background: var(--music-line); }
+.music-progress::-moz-range-thumb { width: 6px; height: 6px; border: 0; border-radius: 50%; background: currentColor; }
+.music-progress:disabled { cursor: default; opacity: .4; }
+.music-controls { display: grid; grid-template-columns: 1fr; margin-top: 28px; }
+.music-controls label > span { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; }
+.music-controls output { color: var(--music-muted); }
+.music-controls input { display: block; width: 100%; height: 26px; appearance: none; border: 0; background: transparent; color: inherit; margin: 12px 0 0; cursor: pointer; }
+.music-controls input::-webkit-slider-runnable-track { height: 2px; background: var(--music-line); }
+.music-controls input::-webkit-slider-thumb { appearance: none; width: 7px; height: 15px; background: currentColor; border: 0; border-radius: 1px; margin-top: -6px; }
+.music-controls input::-moz-range-track { height: 2px; background: var(--music-line); }
+.music-controls input::-moz-range-thumb { width: 7px; height: 15px; background: currentColor; border: 0; border-radius: 1px; }
+
+@media (prefers-color-scheme: dark) {
+  .music-page { --music-line: #262626; --music-muted: #a3a3a3; --music-hover: #141414; }
+}
+
+@media (max-width: 600px) {
+  .music-track { grid-template-columns: 22px minmax(0, 1fr) 28px 14px; gap: 10px; padding: 17px 0; font-size: 12px !important; }
+  .music-controls input { margin-top: 5px; }
+  .music-transport-note { display: none; }
+  .music-page .signal-canvas { height: 150px; }
+  .music-signal-label { font-size: 10px; }
+}
