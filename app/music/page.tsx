@@ -6,7 +6,7 @@ import { SectionText } from 'app/components/typeanimation'
 
 export const metadata: Metadata = {
   title: { absolute: 'Music | George' },
-  description: 'I make music and DJ as Rako. Original tracks and mixes.',
+  description: 'I make music and DJ on the side. Original tracks and mixes.',
 }
 
 export default async function Music() {
@@ -19,8 +19,8 @@ export default async function Music() {
           <SectionText title="music" />
         </h1>
         <p className="font-mono text-xl tracking-tight mt-8">
-          I make music and DJ as Rako. A different way of making things,
-          somewhere between software and sound.
+          I make music and DJ for fun. A different way of making things,
+          somewhere between software and sound. 
         </p>
       </div>
       <MusicRoom tracks={tracks} />

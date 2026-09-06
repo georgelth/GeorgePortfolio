@@ -16,7 +16,7 @@ export default function Home() {
           flickerAmount={1}
           noiseAmp={1}
           curvature={0.05}
-          tint="#94a3b8"
+          tint="#60a8c4"
           mouseReact
           mouseStrength={0.2}
           pageLoadAnimation

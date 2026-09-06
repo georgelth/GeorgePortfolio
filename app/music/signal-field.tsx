@@ -20,7 +20,7 @@ export default function SignalField({ engine, motion }: { engine: RefObject<Musi
     const samples = new Uint8Array(1024)
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
     const theme = window.matchMedia('(prefers-color-scheme: dark)')
-    let color = getComputedStyle(canvas).color
+    let color = '#60a8c4'
 
     const move = (event: PointerEvent) => {
       const box = canvas.getBoundingClientRect()
