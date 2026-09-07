@@ -4,6 +4,8 @@ import { getMusicTracks } from './tracks'
 import { Navbar } from 'app/components/nav'
 import { SectionText } from 'app/components/typeanimation'
 import Image from 'next/image'
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: { absolute: 'Music | George' },
@@ -75,6 +77,31 @@ export default async function Music() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section id="out-driving" aria-labelledby="driving-heading" className="mb-16 mt-12 scroll-mt-8 sm:mt-16">
+        <h2 id="driving-heading" className='font-sans text-3xl font-bold tracking-tighter sm:text-4xl'>events</h2>
+        <p className={'font-mono text-base leading-7 text-neutral-700 dark:text-neutral-300 mt-5 max-w-2xl'}>
+          Notable events that I've photographed.
+        </p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {/* {drivingPhotos.map((photo, index) => (
+            <figure key={photo.src} className={index === 0 ? 'sm:col-span-2' : ''}>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={1536}
+                height={1024}
+                sizes={index === 0 ? '(max-width: 1024px) 100vw, 896px' : '(max-width: 640px) 100vw, 436px'}
+                className={(index === 0 ? 'aspect-[3/2] sm:aspect-[16/9]' : 'aspect-[3/2]') + ' w-full object-cover'}
+              />
+              <figcaption className={smallText + ' mt-3'}>{photo.caption} / sample image</figcaption>
+            </figure>
+          ))} */}
+        </div>
+        <Link href="/photos" className='underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-current focus-visible:outline focus-visible:outline-offset-4 dark:decoration-neutral-700 mt-8 inline-flex items-center gap-2 font-mono text-sm'>
+          more through my lens <ArrowUpRightIcon aria-hidden="true" className="size-4" />
+        </Link>
       </section>
 
     </main>
