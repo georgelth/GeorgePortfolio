@@ -12,6 +12,36 @@ function formatTime(seconds: number) {
   return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`
 }
 
+function TrackDuration({ src }: { src: string }) {
+  const [seconds, setSeconds] = useState<number | null>(null)
+
+  useEffect(() => {
+    const audio = new Audio()
+    audio.preload = 'metadata'
+    setSeconds(null)
+    const update = () => {
+      if (Number.isFinite(audio.duration) && audio.duration > 0) {
+        setSeconds(audio.duration)
+      }
+    }
+    audio.addEventListener('loadedmetadata', update)
+    audio.addEventListener('durationchange', update)
+    audio.src = src
+    return () => {
+      audio.removeEventListener('loadedmetadata', update)
+      audio.removeEventListener('durationchange', update)
+      audio.removeAttribute('src')
+      audio.load()
+    }
+  }, [src])
+
+  return (
+    <span className="music-muted music-track-duration" aria-label={seconds === null ? 'Duration unavailable' : `Duration ${formatTime(seconds)}`}>
+      {seconds === null ? '\u2014' : formatTime(seconds)}
+    </span>
+  )
+}
+
 export default function MusicRoom({ tracks }: { tracks: MusicTrack[] }) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const engine = useRef<MusicPlayer | null>(null)
@@ -178,7 +208,7 @@ export default function MusicRoom({ tracks }: { tracks: MusicTrack[] }) {
             <button type="button" key={item.src} className="music-track" onClick={() => selectTrack(index)} aria-pressed={selected === index}>
               <span className="music-muted">{String(index + 1).padStart(2, '0')}</span>
               <span className="music-track-name">{item.title}</span>
-              <span className="music-muted">mp3</span>
+              <TrackDuration src={item.src} />
               <span className="music-track-marker" aria-hidden="true">{selected === index ? '\u2190' : '\u2197'}</span>
             </button>
           ))}

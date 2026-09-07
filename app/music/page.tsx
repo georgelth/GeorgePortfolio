@@ -3,6 +3,7 @@ import MusicRoom from './music-room'
 import { getMusicTracks } from './tracks'
 import { Navbar } from 'app/components/nav'
 import { SectionText } from 'app/components/typeanimation'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: { absolute: 'Music | George' },
@@ -23,7 +24,59 @@ export default async function Music() {
           somewhere between software and sound. 
         </p>
       </div>
+
       <MusicRoom tracks={tracks} />
+
+      <section id="the-story" aria-labelledby="story-heading" className="my-16 scroll-my-8 sm:my-20">
+        <h2 id="story-heading" className='font-sans text-3xl font-bold tracking-tighter sm:text-4xl'>djing</h2>
+        <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_2fr] sm:gap-12">
+          <div className='font-mono text-base leading-7 text-neutral-700 dark:text-neutral-300'>
+            <p> 
+              I was one of the founding members of EDM Club at Tennessee Tech University. Our mission was simple: spread good energy through music around campus and create a space for people who shared that same passion. What started as a small group of friends grew into a community where DJs, producers, and anyone who simply enjoyed the music could come together. 
+            </p>
+            <p> 
+              <br/> 
+              People naturally find plenty of reasons to disagree, but music has a strange way of making those differences feel unimportant. Some of my favorite memories came from watching a room full of completely different people share the same energy for a few hours.
+            </p>
+          </div>
+          <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t border-neutral-200 pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 dark:border-neutral-800">
+            <Image
+              src="/cars/miata-overlook.png"
+              alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
+              width={1536}
+              height={1024}
+              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              className="aspect-auto h-auto w-[100%] object-cover"
+            />
+          </aside>
+        </div>
+      </section>
+
+      <section id="the-story" aria-labelledby="story-heading" className="my-16 scroll-my-8 sm:my-20">
+        <h2 id="story-heading" className='font-sans text-3xl font-bold tracking-tighter sm:text-4xl'>production</h2>
+        <div className="mt-8 grid gap-8 sm:grid-cols-[2fr_1fr] sm:gap-12">
+          <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t border-neutral-200 pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-r sm:border-t-0 sm:pr-6 sm:pt-0 dark:border-neutral-800">
+            <Image
+              src="/cars/miata-overlook.png"
+              alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
+              width={1536}
+              height={1024}
+              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              className="aspect-auto h-auto w-[100%] object-cover"
+            />
+          </aside>
+          <div className='font-mono text-base leading-7 text-neutral-700 dark:text-neutral-300'>
+            <p>
+              Once I started DJing, I had an itching curiosity to understand the music I was playing. I had already started tinkering in Garageband in middle school, but that curiosity eventually brought me back to production and led me to FL Studio in college. I've spent countless hours experimenting with sounds, techniques, and making plenty of things that will never leave my computer.
+            </p>
+            <p>
+              <br/>
+              It's become another creative outlet where I can take my influences and flip it into something uniquely <span className='italic'>me.</span> I'm still learning and experimenting, and I think that's exactly what keeps me coming back to it.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }
