@@ -33,17 +33,17 @@ export default function Cars() {
 
       <figure>
         <Image
-          src="/cars/miata-overlook.png"
+          src="/cars/hero.jpg"
           alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
           width={1536}
           height={1024}
           priority
           sizes="(max-width: 1024px) 100vw, 896px"
           className="aspect-[3/2] w-full object-cover sm:aspect-[16/9]"
+          style={{ objectPosition: '50% 70%' }}
         />
         <figcaption className={smallText + ' mt-3 flex flex-wrap justify-between gap-x-4 gap-y-1'}>
           <span>2003 mazda miata / nb2 / owned since summer &apos;23</span>
-          <span>sample image</span>
         </figcaption>
       </figure>
 
