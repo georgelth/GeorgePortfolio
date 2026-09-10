@@ -104,7 +104,7 @@ export default function Cars() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 436px"
                 className="aspect-[3/2] w-full object-cover"
               />
-              <p className={smallText + ' mt-3'}>{detail.label} / sample</p>
+              <p className={smallText + ' mt-3'}>{detail.label}</p>
               <h3 className="mt-2 font-sans text-xl font-semibold">{detail.title}</h3>
               <p className={bodyText + ' mt-3'}>{detail.description}</p>
             </article>

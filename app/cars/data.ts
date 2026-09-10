@@ -9,27 +9,27 @@ export const buildDetails = [
   },
   {
     title: 'wheels & fitment',
-    label: 'the details',
+    label: 'the shoes',
     src: '/cars/wheels.jpg',
     alt: '',
     description:
-      'This is the kind of decision I can spend far too long thinking about. I like a wheel that feels at home on the car, with a fit that still makes sense for actual roads. The interesting part is how a small change can shift the whole character of it.',
+      'This was an important decision for me I spent way too long thinking about. These are my 15\" CST Precedeo Demon Cambers I bought brand new from Japan. A classic 90\'s 3-piece wheel that plays well with the style direction I took for this car.',
   },
   {
     title: 'body kits & aero',
-    label: 'the details',
+    label: 'the shape',
     src: '/cars/aero.jpg',
     alt: '',
     description:
-      'This is the kind of decision I can spend far too long thinking about. I like a wheel that feels at home on the car, with a fit that still makes sense for actual roads. The interesting part is how a small change can shift the whole character of it.',
+      'The car is fitted with the OEM Mazdaspeed Miata body kit, or also known as the \"tupperware kit\". The only non-tupperware part on my setup is the Garage Vary replica front lip. I will be replacing this soon.',
   },
   {
     title: 'interior & extras',
-    label: 'under the hood',
+    label: 'the details',
     src: '/cars/interior.jpg',
     alt: '',
     description:
-      'Some of the work I want to document barely shows up in photos: maintenance, small fixes, and figuring out what needs attention next. There is something satisfying about getting to know an older car one job at a time.',
+      'My interior is arguably my favorite part about this car. Most notably: JoySupply steering wheel, shift knob and floor mats. Kenwood DPX-6021M radio (y2k radio excusively sold in Japan). Custom gauge cluster from revlimiter.net',
   },
 ]
 
