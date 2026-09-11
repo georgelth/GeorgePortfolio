@@ -10,6 +10,11 @@
   letter-spacing: var(--letter-spacing-tight, -0.025em);
 }
 
+.case-study :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-geist-sans);
+  letter-spacing: var(--letter-spacing-tighter, -0.05em);
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
