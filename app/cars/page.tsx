@@ -112,7 +112,7 @@ export default function Cars() {
         </div>
         <details className="mt-8 border-y border-neutral-200 dark:border-neutral-800">
           <summary className="cursor-pointer py-5 font-mono text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
-            the parts list <span className="ml-2 text-neutral-600 dark:text-neutral-400">/ to fill in</span>
+            the parts list
           </summary>
           <dl className="pb-5 font-mono text-sm leading-6">
             {partsList.map((part) => (
