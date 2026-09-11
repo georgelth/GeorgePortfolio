@@ -53,7 +53,7 @@ export default async function ProjectCaseStudy({
         />
       </div>
 
-      <div className="prose case-study mt-16 font-mono leading-7">
+      <div className="prose case-study my-16 font-mono leading-7">
         <CustomMDX source={project.text} />
       </div>
     </article>
