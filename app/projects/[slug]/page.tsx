@@ -4,6 +4,8 @@ import { getProject, projects } from '../data'
 import { CustomMDX } from 'app/components/mdx'
 import { Navbar } from 'app/components/nav'
 import { BackLink } from 'app/components/back-link'
+import { readFile } from 'node:fs/promises'
+import path from 'node:path'
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -22,6 +24,10 @@ export default async function ProjectCaseStudy({
   if (!project) {
     notFound()
   }
+
+  const content = await readFile(
+    path.join(process.cwd(), 'content', 'projects', project.contentFile), 'utf-8'
+  )
 
   return (
     <article>
@@ -54,7 +60,7 @@ export default async function ProjectCaseStudy({
       </div>
 
       <div className="prose case-study my-16 font-mono leading-7">
-        <CustomMDX source={project.text} />
+        <CustomMDX source={content} />
       </div>
     </article>
   )

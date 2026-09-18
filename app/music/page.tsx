@@ -43,9 +43,9 @@ export default async function Music() {
             <Image
               src="/music/dj2.jpg"
               alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
-              width={1536}
-              height={1024}
-              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              width={2160}
+              height={2880}
+              sizes="(max-width: 639px) 33vw, (max-width: 943px) 67vw, 541px"
               className="aspect-auto h-auto w-[100%] object-cover"
             />
           </aside>
@@ -59,9 +59,9 @@ export default async function Music() {
             <Image
               src="/music/producer.jpg"
               alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
-              width={1536}
-              height={1024}
-              sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
+              width={1206}
+              height={1809}
+              sizes="(max-width: 639px) 33vw, (max-width: 943px) 67vw, 541px"
               className="aspect-auto h-auto w-[100%] object-cover"
             />
           </aside>
