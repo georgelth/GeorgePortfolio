@@ -22,31 +22,15 @@ export const projects = [
     description: 'A Facebook Marketplace alternative.',
     image: '/projects/devflow-cli.png',
     tags: ['Dart', 'Flutter', 'Node.js', 'MySQL'],
-    contentFile: 'Teams struggled to understand their product data.'
+    contentFile: ''
   },
   {
-    slug: "learnspace",
-    title: 'LearnSpace',
-    description: 'An accessible learning platform that keeps courses, lessons, and progress in one place.',
+    slug: "gawa",
+    title: 'GAWA',
+    description: 'George\'s Awesome Weather App!',
     image: '/projects/learnspace.png',
-    tags: ['Next.js', 'PostgreSQL'],
-    contentFile: 'Teams struggled to understand their product data.'
-  },
-  {
-    slug: "particlefield",
-    title: 'Particle Field',
-    description: 'An interactive experiment that turns live data into a responsive particle system.',
-    image: '/projects/particle-field.png',
-    tags: ['WebGL', 'Three.js'],
-    contentFile: 'Teams struggled to understand their product data.'
-  },
-  {
-    slug: "ledger",
-    title: 'Ledger',
-    description: 'A personal finance dashboard designed to make spending patterns easier to understand.',
-    image: '/projects/ledger.png',
-    tags: ['React', 'Data Viz'],
-    contentFile: 'Teams struggled to understand their product data.'
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    contentFile: ''
   },
 ]
 
