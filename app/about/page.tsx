@@ -3,8 +3,16 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
 import { SectionText } from 'app/components/typeanimation'
 import Image from 'next/image'
+import { CustomMDX } from 'app/components/mdx'
+import { readFile } from 'node:fs/promises'
+import path from 'node:path'
 
-export default function About() {
+
+export default async function About() {
+  const content = await readFile(
+    path.join(process.cwd(), 'app', 'about', 'about.md'), 'utf-8'
+  )
+  
   return (
     <main>
       <Navbar />
@@ -12,9 +20,9 @@ export default function About() {
         <h1 className="font-sans text-5xl font-bold tracking-tighter">
           <SectionText title='about'/>
         </h1>
-        <p className='font-mono text-xl tracking-tight mt-8'>
-          Hey, I'm George. I'm a 2026 graduate from Tennessee Tech University with a B.S. in Computer Science and a minor in Mathematics. I have a passion for software development and balancing creativity with practical use. I strive to continue building my skillsets every day in an ever-changing environment.
-        </p>
+        <div className="prose case-study mt-8 font-mono text-xl leading-7">
+          <CustomMDX source={content} />
+        </div>
       </div>
       <div className='mb-14'>
         <h1 className="font-sans text-4xl font-bold tracking-tighter">links</h1>
@@ -47,7 +55,7 @@ export default function About() {
         <div className='font-mono text-xl tracking-tight'>
           <div>
             <a
-              href="https://github.com/georgelth"
+              href="https://linkedin.com/in/georgelth"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-1"
