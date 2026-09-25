@@ -5,6 +5,7 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
 import { Navbar } from 'app/components/nav'
 import { buildDetails, drivingPhotos, partsList } from './data'
 import { SectionText } from 'app/components/typeanimation'
+import { ForwardLink } from 'app/components/forward-link'
 
 export const metadata: Metadata = {
   title: { absolute: 'cars' },
@@ -25,7 +26,7 @@ export default function Cars() {
         <h1 className="font-sans text-5xl font-bold tracking-tighter">
           <SectionText title='cars'/>
         </h1>
-        <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight">
+        <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight dark:text-neutral-400">
           This is my 2003 Mazda Miata, a project I bought in the heat of summer
           &apos;23. An ongoing project, and a good excuse to step away from a screen.
         </p>
@@ -110,8 +111,9 @@ export default function Cars() {
             </article>
           ))}
         </div>
-        <details className="mt-8 border-y border-neutral-200 dark:border-neutral-800">
-          <summary className="cursor-pointer py-5 font-mono text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+
+        <details open className="my-16 border-y border-neutral-200 dark:border-neutral-800">
+          <summary className="cursor-pointer py-5 font-mono text-sm focus-visible:outline focus-visible:outline-offset-4">
             the parts list
           </summary>
           <dl className="pb-5 font-mono text-sm leading-6">
@@ -123,32 +125,6 @@ export default function Cars() {
             ))}
           </dl>
         </details>
-      </section>
-
-      <section id="out-driving" aria-labelledby="driving-heading" className="mb-16 mt-12 scroll-mt-8 sm:mt-16">
-        <h2 id="driving-heading" className={sectionTitle}>out driving</h2>
-        <p className={bodyText + ' mt-5 max-w-2xl'}>
-          The days between garage sessions. Back roads, a place to pull over,
-          and a few photos before heading home.
-        </p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          {drivingPhotos.map((photo, index) => (
-            <figure key={photo.src} className={index === 0 ? 'sm:col-span-2' : ''}>
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                width={1536}
-                height={1024}
-                sizes={index === 0 ? '(max-width: 1024px) 100vw, 896px' : '(max-width: 640px) 100vw, 436px'}
-                className={(index === 0 ? 'aspect-[3/2] sm:aspect-[16/9]' : 'aspect-[3/2]') + ' w-full object-cover'}
-              />
-              <figcaption className={smallText + ' mt-3'}>{photo.caption} / sample image</figcaption>
-            </figure>
-          ))}
-        </div>
-        <Link href="/photos" className={linkStyle + ' mt-8 inline-flex items-center gap-2 font-mono text-sm'}>
-          more through my lens <ArrowUpRightIcon aria-hidden="true" className="size-4" />
-        </Link>
       </section>
     </main>
   )

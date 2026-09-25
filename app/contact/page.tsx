@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRightIcon, ArrowUpRightIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { ArrowUpRightIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
 import { Navbar } from 'app/components/nav'
 import { SectionText } from 'app/components/typeanimation'
 import styles from './contact.module.css'

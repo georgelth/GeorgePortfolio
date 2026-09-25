@@ -19,7 +19,7 @@ export default async function Music() {
         <h1 className="font-sans text-5xl font-bold tracking-tighter">
           <SectionText title="music" />
         </h1>
-        <p className="font-mono text-xl tracking-tight mt-8">
+        <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight dark:text-neutral-400">
           I make music and DJ for fun. A different way of making things,
           somewhere between software and sound. 
         </p>

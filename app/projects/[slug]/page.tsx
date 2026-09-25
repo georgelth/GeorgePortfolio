@@ -44,7 +44,7 @@ export default async function ProjectCaseStudy({
           {project.title}
         </h1>
 
-        <p className="font-mono mt-6 max-w-2xl text-xl text-neutral-600 dark:text-neutral-400">
+        <p className="font-mono mt-6 max-w-2xl text-xl italic text-neutral-600 dark:text-neutral-400">
           {project.description}
         </p>
       </header>

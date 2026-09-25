@@ -19,7 +19,7 @@ export default function Projects() {
                 </span>
               }/>
           </h1>
-          <p className="mt-8 font-mono text-xl">
+          <p className="mt-8 font-mono text-xl dark:text-neutral-400">
             A selection of things I&apos;ve designed and built, balancing useful software with thoughtful interaction.
           </p>
         </div>
