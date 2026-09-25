@@ -1,7 +1,7 @@
 'use client'
 
 import { TypeAnimation } from "react-type-animation"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 
 export function HomePageText(){
@@ -62,10 +62,11 @@ export function HomePageText(){
   )
 }
 
-export function SectionText({ title }: { title: string }) {
+export function SectionText({ title, after }: { title: string, after?: ReactNode }) {
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor'
   const pathname = usePathname()
   const [animate, setAnimate] = useState(false)
+  const [finished, setFinished] = useState(false)
 
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -78,42 +79,55 @@ export function SectionText({ title }: { title: string }) {
 
 
   return (
-    <span style={{ display: 'inline-grid', maxWidth: '100%', verticalAlign: 'bottom' }}>
-      {/* Keep the full title accessible and reserve its final dimensions. */}
-      <span style={{ gridArea: '1 / 1', opacity: animate ? 0 : 1 }}>
-        {title}
-      </span>
-      {animate && (
-        <>
-          <TypeAnimation
-            key={`${pathname}:${title}`}
-            cursor={false}
-            className={CURSOR_CLASS_NAME}
-            sequence={[
-              200,
-              title,
-              (el) => el?.classList.remove(CURSOR_CLASS_NAME)
-            ]}
-            speed={20}
-            repeat={0}
-            wrapper="span"
-            aria-hidden="true"
-            style={{ gridArea: '1 / 1' }}
-          />
+    <>
+      <span style={{ display: 'inline-grid', maxWidth: '100%', verticalAlign: 'bottom' }}>
+        {/* Keep the full title accessible and reserve its final dimensions. */}
+        <span style={{ gridArea: '1 / 1', opacity: animate ? 0 : 1 }}>
+          {title}
+        </span>
+        {animate && (
+          <>
+            <TypeAnimation
+              key={`${pathname}:${title}`}
+              cursor={false}
+              className={CURSOR_CLASS_NAME}
+              sequence={[
+                200,
+                title,
+                (el) => {
+                  el?.classList.remove(CURSOR_CLASS_NAME),
+                  setFinished(true)
+                }
+              ]}
+              speed={20}
+              repeat={0}
+              wrapper="span"
+              aria-hidden="true"
+              style={{ gridArea: '1 / 1' }}
+            />
 
-          <style global jsx>{`
-            .custom-type-animation-cursor::after {
-              content: '_';
-              animation: cursor 1.1s infinite step-start;
-            }
-            @keyframes cursor {
-              50% {
-                opacity: 1;
+            <style global jsx>{`
+              .custom-type-animation-cursor::after {
+                content: '_';
+                animation: cursor 1.1s infinite step-start;
               }
-            }  
-          `}</style>
-        </>
-      )}
-    </span>
+              @keyframes cursor {
+                50% {
+                  opacity: 1;
+                }
+              }  
+            `}</style>
+          </>
+        )}
+      </span>
+
+      <span
+        style={{
+          visibility: finished || animate === false ? 'visible' : 'hidden',
+        }}
+      >
+        {after}
+      </span>
+    </>
   )
 }

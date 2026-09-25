@@ -11,8 +11,13 @@ export default function Projects() {
       <div className="relative left-1/2 w-[calc(100vw-2rem)] max-w-8xl -translate-x-1/2 lg:w-[calc(100vw-12rem)] my-12">
         <div className="mb-14 max-w-4xl">
           <h1 className="font-sans text-5xl font-bold">
-            <SectionText title='projects'/>
-            <span className='font-mono text-[42px] text-neutral-600 ml-3'>{`[${String(projects.length).padStart(2, '0')}]`}</span>
+            <SectionText
+              title='projects'
+              after={
+                <span className="font-mono text-[42px] text-neutral-600 ml-3">
+                  {`[${String(projects.length).padStart(2, '0')}]`}
+                </span>
+              }/>
           </h1>
           <p className="mt-8 font-mono text-xl">
             A selection of things I&apos;ve designed and built, balancing useful software with thoughtful interaction.
