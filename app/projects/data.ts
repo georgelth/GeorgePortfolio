@@ -3,6 +3,13 @@
 import portfolio from '../../public/projects/portfolio1.png'
 
 // campuswatch
+import cw2 from '../../public/projects/cw2.png'
+import cw3 from '../../public/projects/cw3.png'
+import cw4 from '../../public/projects/cw4.png'
+import cw5 from '../../public/projects/cw5.png'
+import cw6 from '../../public/projects/cw6.png'
+import cw7 from '../../public/projects/cw7.png'
+import cw8 from '../../public/projects/cw8.png'
 
 // hippoexchange
 import hippo1 from '../../public/projects/hippo1.png'
@@ -15,7 +22,7 @@ import hippo7 from '../../public/projects/hippo7.png'
 import hippo8 from '../../public/projects/hippo8.png'
 
 // gawa
-import weather from '../../public/projects/learnspace.png'
+import gawa from '../../public/projects/gawa.png'
 
 export const projects = [
   {
@@ -32,7 +39,15 @@ export const projects = [
     title: 'CampusWatch',
     description: 'A friendly mobile experience to help college students stay on track.',
     image: '/projects/cw1.png',
-    images: [],
+    images: [
+      cw2,
+      cw6,
+      cw3,
+      cw4,
+      cw5,
+      cw7,
+      cw8,
+    ],
     tags: ['Ionic', 'React', 'TypeScript', 'Java', 'Node.js', 'MySQL', 'GCP'],
     contentFile: 'campuswatch.md'
   },
@@ -58,8 +73,8 @@ export const projects = [
     slug: "gawa",
     title: 'GAWA',
     description: 'George\'s Awesome Weather App!',
-    image: '/projects/learnspace.png',
-    images: [weather],
+    image: '/projects/gawa.png',
+    images: [gawa],
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     contentFile: 'gawa.md'
   },
