@@ -5,6 +5,7 @@ export const projects = [
     title: 'Personal Portfolio',
     description: 'The website you\'re looking at right now!',
     image: '/projects/portfolio1.png',
+    images: ['/projects/portfolio1.png'],
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
     contentFile: 'portfolio.md'
   },
@@ -13,6 +14,12 @@ export const projects = [
     title: 'CampusWatch',
     description: 'A friendly mobile experience to help college students stay on track.',
     image: '/projects/cw1.png',
+    images: [
+      '/projects/hippo10.png',
+      '/projects/hippo1.png',
+      '/projects/hippo2.png',
+      '/projects/hippo3.png',
+    ],
     tags: ['Ionic', 'React', 'TypeScript', 'Java', 'Node.js', 'MySQL', 'GCP'],
     contentFile: 'campuswatch.md'
   },
@@ -21,6 +28,11 @@ export const projects = [
     title: 'HippoExchange',
     description: 'A Facebook Marketplace alternative.',
     image: '/projects/hippo10.png',
+    images: [
+      '/projects/hippo1.png',
+      '/projects/hippo2.png',
+      '/projects/hippo3.png',
+    ],
     tags: ['Dart', 'Flutter', 'Node.js', 'MongoDB', 'GCP'],
     contentFile: 'hippoexchange.md'
   },
@@ -29,6 +41,7 @@ export const projects = [
     title: 'GAWA',
     description: 'George\'s Awesome Weather App!',
     image: '/projects/learnspace.png',
+    images: ['/projects/learnspace.png'],
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     contentFile: 'gawa.md'
   },
