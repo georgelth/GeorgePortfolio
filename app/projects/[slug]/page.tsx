@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { ProjectCarousel } from 'app/components/project-carousel'
 import { notFound } from 'next/navigation'
 import { getProject, projects } from '../data'
 import { CustomMDX } from 'app/components/mdx'
@@ -49,15 +49,7 @@ export default async function ProjectCaseStudy({
         </p>
       </header>
 
-      <div className="relative aspect-video overflow-hidden">
-        <Image
-          src={project.image}
-          alt={`${project.title} case study`}
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+      <ProjectCarousel images={project.images} title={project.title} />
 
       <div className="prose case-study my-16 font-mono leading-7">
         <CustomMDX source={content} />
