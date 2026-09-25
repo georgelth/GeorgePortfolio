@@ -29,14 +29,12 @@ export default function Photos() {
         <section className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-3">
           {photos.map((photo) => (
             <figure
-              key={photo.src}
+              key={photo.src.src}
               className="mb-4 break-inside-avoid overflow-hidden"
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
                 sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className="h-auto w-full"
               />
