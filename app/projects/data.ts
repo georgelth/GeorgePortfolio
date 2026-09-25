@@ -21,7 +21,7 @@ export const projects = [
     title: 'HippoExchange',
     description: 'A Facebook Marketplace alternative.',
     image: '/projects/hippo10.png',
-    tags: ['Dart', 'Flutter', 'Node.js', 'MySQL'],
+    tags: ['Dart', 'Flutter', 'Node.js', 'MongoDB', 'GCP'],
     contentFile: 'hippoexchange.md'
   },
   {
