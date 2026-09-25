@@ -89,7 +89,7 @@ export default async function About() {
         <p className='font-mono text-xl tracking-tight mt-2'>
           frameworks
           <ArrowRightIcon className='size-5 mx-2 inline'/>
-          node.js / next.js / tailwind / ionic 
+          react / ionic / next.js / tailwind / bootstrap / node.js
         </p>
         <p className='font-mono text-xl tracking-tight mt-2'>
           tools
