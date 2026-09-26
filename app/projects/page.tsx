@@ -3,6 +3,12 @@ import { Navbar } from '../components/nav'
 import Link from 'next/link'
 import { projects } from './data'
 import { SectionText } from 'app/components/typeanimation'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: { absolute: 'projects' },
+  description: 'a list of george\'s projects.',
+}
 
 export default function Projects() {
   return (

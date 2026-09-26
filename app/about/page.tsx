@@ -6,7 +6,12 @@ import Image from 'next/image'
 import { CustomMDX } from 'app/components/mdx'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: { absolute: 'about' },
+  description: 'about george howard.',
+}
 
 export default async function About() {
   const content = await readFile(

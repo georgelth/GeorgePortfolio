@@ -6,7 +6,7 @@ import { SectionText } from 'app/components/typeanimation'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Music | George' },
+  title: { absolute: 'music' },
   description: 'I make music and DJ on the side. Original tracks and mixes.',
 }
 

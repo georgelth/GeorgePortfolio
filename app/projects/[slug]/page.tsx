@@ -7,6 +7,12 @@ import { BackLink } from 'app/components/back-link'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import ExternalLink from 'app/components/external-link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: { absolute: "projects" },
+  description: 'about george howard.',
+}
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -21,18 +27,18 @@ export default async function ProjectCaseStudy({
 }) {
   const { slug } = await params
   const project = getProject(slug)
-
+  
   if (!project) {
     notFound()
   }
-
+  
   const githubUrl = project.github?.trim()
   const externalUrl = project.external?.trim()
-
+  
   const content = await readFile(
     path.join(process.cwd(), 'content', 'projects', project.contentFile), 'utf-8'
   )
-
+  
   return (
     <article>
       <Navbar/>

@@ -2,6 +2,12 @@ import Image from 'next/image'
 import { Navbar } from '../components/nav'
 import { photos } from './data'
 import { SectionText } from 'app/components/typeanimation'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: { absolute: "photos" },
+  description: 'a collection of george\'s photos.',
+}
 
 export default function Photos() {
   return (
