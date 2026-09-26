@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
 import { Navbar } from 'app/components/nav'
-import { buildDetails, drivingPhotos, partsList } from './data'
+import { buildDetails, partsList } from './data'
 import { SectionText } from 'app/components/typeanimation'
 import { ForwardLink } from 'app/components/forward-link'
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 const sectionTitle = 'font-sans text-3xl font-bold tracking-tighter sm:text-4xl'
-const bodyText = 'font-mono text-base leading-7 text-neutral-700 dark:text-neutral-300'
+const bodyText = 'font-mono text-base leading-7 text-neutral-700 dark:text-neutral-400'
 const smallText = 'font-mono text-xs leading-5 text-neutral-600 dark:text-neutral-400'
 const linkStyle = 'underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 dark:decoration-neutral-700'
 
@@ -53,37 +53,37 @@ export default function Cars() {
         <div className="mt-8 grid gap-8 sm:grid-cols-[2fr_1fr] sm:gap-12">
           <div className={bodyText + ' space-y-5'}>
             <p>
-              One of my favorite things about building a car is that there isn't one correct way to do it. There are countless styles and directions you can take, and I've always argued that pulling ideas from several of them rather than fitting the car into one category is a lot more satisfying. A lot of that inspiration comes from friends, and the shows I attend. The goal is something cohesive, but still distinctly mine.
+              One of my favorite things about building a car is that <strong className='dark:text-neutral-300'>there isn't one correct way to do it.</strong> There are countless styles and directions you can take, and I've always argued that <strong className='dark:text-neutral-300'>pulling ideas from several styles</strong> rather than fitting the car into one category is a lot more satisfying. A lot of that inspiration comes from friends, and the shows I attend. The goal is something cohesive, but still <strong className='dark:text-neutral-300'>distinctly mine.</strong>
             </p>
-            <p> A lot of my inspiration comes from the Japanese tuner cars of the 1990s and 2000s. I love the wheels, fitment, colors, graphics, and little details that gave cars from that era so much personality. I want the Miata to feel like something that could have existed in that period without trying to make it a perfect time capsule. Other choices are completely personal, and that's part of the fun.
+            <p> A lot of my inspiration comes from the <strong className='dark:text-neutral-300'>Japanese tuner cars of the 1990s and 2000s.</strong> I love the wheels, fitment, colors, graphics, and little details that gave cars from that era so much personality. I want the Miata to feel like something that <em>could</em> have existed in that period without trying to make it a perfect time capsule. Other choices are completely personal, and that's part of the fun.
             </p>
-            <p> At the same time, I still want to actually drive the car. I love aggressive fitment and low cars, but I don't want something I'm afraid to take down a back road because of a bump in the pavement. I want the stance I'm looking for while still being able to throw it into a corner, take a long drive, or enjoy the car without sacrificing my oil pan.
+            <p> At the same time, <strong className='dark:text-neutral-300'>I still want to actually drive the car.</strong> I love aggressive fitment and low cars, but I don't want something I'm afraid to take down a back road because of a bump in the pavement. I want the stance I'm looking for while still being able to throw it into a corner, take a long drive, or enjoy the car without sacrificing my oil pan.
             </p>
-            <p> My philosophy is still form &gt; function. I'm willing to sacrifice some practicality for the look I want, but never enough that the car stops being enjoyable. A happy medium is what I'm after: something inspired by the tuner culture I grew up loving, something unmistakably mine, and something I can still grab the keys to and drive.
+            <p> <strong className='dark:text-neutral-300'>My philosophy is still form &gt; function</strong>. I'm willing to sacrifice some practicality for the look I want, but never enough that the car stops being enjoyable. A happy medium is what I'm after: something inspired by the tuner culture I grew up loving, something unmistakably mine, and something I can still grab the keys to and drive.
             </p>
           </div>
           <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t border-neutral-200 pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 dark:border-neutral-800">
             <Image
-              src="/cars/miata-overlook.png"
-              alt="AI-generated sample: a silver NB2 Miata parked at a wooded overlook in late-afternoon light"
-              width={1536}
-              height={1024}
+              src="/cars/square1.jpg"
+              alt="first iterated version of the miata. on stock wheels, in front of a nice well lit siding of a building."
+              width={2000}
+              height={2000}
               sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
               className="aspect-square h-auto w-[95%] object-cover"
             />
             <Image
-              src="/cars/miata-wheel.png"
-              alt="AI-generated sample: silver wheel and fender detail illustrating the Miata’s fitment"
-              width={1536}
-              height={1024}
+              src="/cars/square2.jpg"
+              alt="second iterated version of the miata. on kansei tandems, in front of a lake."
+              width={2000}
+              height={2000}
               sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
               className="aspect-square h-auto w-[95%] object-cover"
             />
             <Image
-              src="/cars/miata-drive.png"
-              alt="AI-generated sample: a silver Miata parked beside a winding forest road"
-              width={1536}
-              height={1024}
+              src="/cars/square3.jpg"
+              alt="current iteration of the miata. on cst precedeo demon cambers, in a parking spot."
+              width={2000}
+              height={2000}
               sizes="(max-width: 640px) 30vw, (max-width: 1024px) 28vw, 256px"
               className="aspect-square h-auto w-[95%] object-cover"
             />
