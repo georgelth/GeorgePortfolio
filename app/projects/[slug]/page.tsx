@@ -6,6 +6,7 @@ import { Navbar } from 'app/components/nav'
 import { BackLink } from 'app/components/back-link'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
+import ExternalLink from 'app/components/external-link'
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -25,6 +26,9 @@ export default async function ProjectCaseStudy({
     notFound()
   }
 
+  const githubUrl = project.github?.trim()
+  const externalUrl = project.external?.trim()
+
   const content = await readFile(
     path.join(process.cwd(), 'content', 'projects', project.contentFile), 'utf-8'
   )
@@ -36,9 +40,21 @@ export default async function ProjectCaseStudy({
         <div className="mb-6">
           <BackLink href="/projects">back to projects</BackLink>
         </div>
-        <p className="font-mono text-sm text-neutral-500">
-          Case study
-        </p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="font-mono text-sm text-neutral-500">Case study</p>
+          <div className='flex items-center justify-between gap-4'>
+            {externalUrl && (
+              <ExternalLink href={externalUrl}>
+                <span className="text-lg">Site</span>
+              </ExternalLink>
+            )}
+            {githubUrl && (
+              <ExternalLink href={githubUrl}>
+                <span className="text-lg">GitHub</span>
+              </ExternalLink>
+            )}
+          </div>
+        </div>
 
         <h1 className="font-sans mt-2 text-4xl font-bold md:text-6xl">
           {project.title}
