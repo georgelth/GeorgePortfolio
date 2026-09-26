@@ -1,6 +1,7 @@
 import { Navbar } from '../components/nav'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
+import { DocumentIcon } from '@heroicons/react/24/outline'
 import { SectionText } from 'app/components/typeanimation'
 import Image from 'next/image'
 import { CustomMDX } from 'app/components/mdx'
@@ -83,23 +84,49 @@ export default async function About() {
             </a>
           </div>
         </div>
+        <div className='font-mono text-xl tracking-tight'>
+          <div>
+            <a
+              href="/about/Howard_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1"
+            >
+              <DocumentIcon aria-hidden="true" className="size-6 shrink-0" />
+              <span className="underline decoration-transparent hover:decoration-gray-400 transition-colors duration-200 underline-offset-2">
+                Résumé
+              </span>
+              <span
+                aria-hidden="true"
+                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              >
+                <ArrowUpRightIcon className='size-3 mb-2 inline'/>
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
       <div className='mb-14'>
         <h1 className="font-sans text-4xl font-bold tracking-tighter">tech</h1>
         <p className='font-mono text-xl tracking-tight mt-8'>
           languages
-          <ArrowRightIcon className='size-5 mx-2 inline'/>
-          js / ts / python / c++ / java / dart / html / css
+          <ArrowRightIcon className='size-5 mx-3 inline'/>
+          <span className='dark:text-neutral-400 tracking-tighter'>js / ts / python / c++ / dart / html / css</span>
         </p>
-        <p className='font-mono text-xl tracking-tight mt-2'>
+        <p className='font-mono text-xl tracking-tight mt-4'>
           frameworks
-          <ArrowRightIcon className='size-5 mx-2 inline'/>
-          react / ionic / next.js / tailwind / bootstrap / node.js
+          <ArrowRightIcon className='size-5 mx-3 inline'/>
+          <span className='dark:text-neutral-400 tracking-tighter'>react / ionic / next.js / tailwind / bootstrap / node.js / express.js</span>
         </p>
-        <p className='font-mono text-xl tracking-tight mt-2'>
+        <p className='font-mono text-xl tracking-tight mt-4'>
+          databases
+          <ArrowRightIcon className='size-5 mx-3 inline'/>
+          <span className='dark:text-neutral-400 tracking-tighter'>mysql / mariadb / mongodb</span>
+        </p>
+        <p className='font-mono text-xl tracking-tight mt-4'>
           tools
-          <ArrowRightIcon className='size-5 mx-2 inline'/>
-          vscode / codex / figma 
+          <ArrowRightIcon className='size-5 mx-3 inline'/>
+          <span className='dark:text-neutral-400 tracking-tighter'>vscode / codex / figma</span>
         </p>
       </div>
     </main>

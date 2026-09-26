@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRightIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
+import { ArrowUpRightIcon, DocumentIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline'
 import { Navbar } from 'app/components/nav'
 import { SectionText } from 'app/components/typeanimation'
 import styles from './contact.module.css'
@@ -16,7 +16,7 @@ const contactLinks = [
   {
     name: 'Email',
     href: 'mailto:georgelthoward@gmail.com',
-    icon: '',
+    icon: EnvelopeIcon,
     label: 'Straight to my inbox',
     description: 'georgelthoward@gmail.com',
     action: 'Send an email',
@@ -28,6 +28,14 @@ const contactLinks = [
     label: 'Start a conversation',
     description: 'For opportunities, collaborations, and introductions.',
     action: 'Connect with me',
+  },
+  {
+    name: 'Résumé',
+    href: '/about/Howard_Resume.pdf',
+    icon: DocumentIcon,
+    label: 'Review my résumé',
+    description: 'My real résumé can be viewed here.',
+    action: 'View my résumé',
   },
   {
     name: 'GitHub',
@@ -62,6 +70,7 @@ export default function Contact() {
       <section aria-label="Ways to connect" className={styles.links}>
         {contactLinks.map((link, index) => {
           const isEmail = link.href.startsWith('mailto:')
+          const Icon = link.icon
           return (
             <a key={link.name} href={link.href}
               target={isEmail ? undefined : '_blank'}
@@ -74,9 +83,9 @@ export default function Contact() {
               <div className={styles.linkContent}>
                 <span className={`font-mono ${styles.label}`}>{link.label}</span>
                 <div className={styles.linkTitle}>
-                  {link.icon
-                    ? <Image src={link.icon} alt="" width={28} height={28} className={styles.icon} />
-                    : <EnvelopeIcon className={styles.emailIcon} aria-hidden="true" />}
+                  {typeof Icon === 'string'
+                    ? <Image src={Icon} alt="" width={28} height={28} className={styles.icon} />
+                    : <Icon className={styles.svgIcon} aria-hidden="true" />}
                   <h3 className="font-sans">{link.name}</h3>
                 </div>
                 <p className={`font-mono ${styles.linkDescription}`}>{link.description}</p>
