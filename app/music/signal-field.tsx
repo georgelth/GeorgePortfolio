@@ -19,7 +19,6 @@ export default function SignalField({ engine, motion }: { engine: RefObject<Musi
     let pointer = 0.5
     const samples = new Uint8Array(1024)
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const theme = window.matchMedia('(prefers-color-scheme: dark)')
     let color = '#60a8c4'
 
     const move = (event: PointerEvent) => {
@@ -85,7 +84,6 @@ export default function SignalField({ engine, motion }: { engine: RefObject<Musi
     intersection.observe(canvas)
     canvas.addEventListener('pointermove', move)
     reduced.addEventListener('change', preferenceChanged)
-    theme.addEventListener('change', preferenceChanged)
     resize()
     frame = requestAnimationFrame(draw)
     return () => {
@@ -94,7 +92,6 @@ export default function SignalField({ engine, motion }: { engine: RefObject<Musi
       intersection.disconnect()
       canvas.removeEventListener('pointermove', move)
       reduced.removeEventListener('change', preferenceChanged)
-      theme.removeEventListener('change', preferenceChanged)
     }
   }, [engine, motion])
 

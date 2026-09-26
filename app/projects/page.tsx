@@ -25,7 +25,7 @@ export default function Projects() {
                 </span>
               }/>
           </h1>
-          <p className="mt-8 font-mono text-xl dark:text-neutral-400">
+          <p className="mt-8 font-mono text-xl text-neutral-400">
             A selection of things I&apos;ve designed and built, balancing useful software with thoughtful interaction.
           </p>
         </div>
@@ -53,14 +53,14 @@ export default function Projects() {
                   <h2 className="font-sans text-xl font-semibold">
                     {project.title}
                   </h2>
-                  <p className="font-mono mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+                  <p className="font-mono mt-2 text-sm leading-6 text-neutral-400">
                     {project.description}
                   </p>
                   <ul className="mt-3 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="rounded-full border border-neutral-200 px-2.5 py-1 font-mono text-xs text-neutral-600 dark:border-neutral-800 dark:text-neutral-400"
+                        className="rounded-full border px-2.5 py-1 font-mono text-xs border-neutral-800 text-neutral-400"
                       >
                         {tag}
                       </li>

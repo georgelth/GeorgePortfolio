@@ -1,8 +1,8 @@
 ﻿/* Small additions to the shared portfolio layout. Colors follow the site theme. */
 .music-page {
-  --music-line: #e5e5e5;
-  --music-muted: #525252;
-  --music-hover: #f5f5f5;
+  --music-line: #262626;
+  --music-muted: #a3a3a3;
+  --music-hover: #141414;
 }
 
 .music-page .music-muted { color: var(--music-muted); }
@@ -45,10 +45,6 @@
 .music-controls input::-webkit-slider-thumb { appearance: none; width: 7px; height: 15px; background: currentColor; border: 0; border-radius: 1px; margin-top: -6px; }
 .music-controls input::-moz-range-track { height: 2px; background: var(--music-line); }
 .music-controls input::-moz-range-thumb { width: 7px; height: 15px; background: currentColor; border: 0; border-radius: 1px; }
-
-@media (prefers-color-scheme: dark) {
-  .music-page { --music-line: #262626; --music-muted: #a3a3a3; --music-hover: #141414; }
-}
 
 @media (max-width: 600px) {
   .music-track { grid-template-columns: 22px minmax(0, 1fr) 7ch 14px; gap: 10px; padding: 17px 0; font-size: 12px !important; }

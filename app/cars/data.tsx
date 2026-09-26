@@ -17,7 +17,7 @@ export const buildDetails = [
     alt: '',
     description: (
       <>
-        This was an important decision for me I spent way too long thinking about. These are my<strong className="dark:text-neutral-300"> 15" CST Precedeo Demon Cambers </strong>I bought brand new from Japan. A classic 90's 3-piece wheel that plays well with the style direction I took for this car.
+        This was an important decision for me I spent way too long thinking about. These are my<strong className="text-neutral-300"> 15" CST Precedeo Demon Cambers </strong>I bought brand new from Japan. A classic 90's 3-piece wheel that plays well with the style direction I took for this car.
       </>
     ),
   },
@@ -28,7 +28,7 @@ export const buildDetails = [
     alt: '',
     description: (
       <>
-        The car is fitted with the<strong className="dark:text-neutral-300"> OEM Mazdaspeed Miata body kit</strong>, or also known as the <em>tupperware kit</em>. The only non-tupperware part on my setup is the Garage Vary replica front lip. I will be replacing this soon.
+        The car is fitted with the<strong className="text-neutral-300"> OEM Mazdaspeed Miata body kit</strong>, or also known as the <em>tupperware kit</em>. The only non-tupperware part on my setup is the Garage Vary replica front lip. I will be replacing this soon.
       </>
     ),
   },
@@ -39,7 +39,7 @@ export const buildDetails = [
     alt: '',
     description: (
       <>
-        My interior is arguably<strong className="dark:text-neutral-300"> my favorite part about this car. </strong>Most notably: JoySupply steering wheel, shift knob and floor mats. Kenwood DPX-6021M radio (y2k radio excusively sold in Japan). Custom flame gauge cluster.
+        My interior is arguably<strong className="text-neutral-300"> my favorite part about this car. </strong>Most notably: JoySupply steering wheel, shift knob and floor mats. Kenwood DPX-6021M radio (y2k radio excusively sold in Japan). Custom flame gauge cluster.
       </>
     ),  
   },

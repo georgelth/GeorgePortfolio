@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 }
 
 const sectionTitle = 'font-sans text-3xl font-bold tracking-tighter sm:text-4xl'
-const bodyText = 'font-mono text-base leading-7 text-neutral-700 dark:text-neutral-400'
-const smallText = 'font-mono text-xs leading-5 text-neutral-600 dark:text-neutral-400'
-const linkStyle = 'underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 dark:decoration-neutral-700'
+const bodyText = 'font-mono text-base leading-7 text-neutral-400'
+const smallText = 'font-mono text-xs leading-5 text-neutral-400'
+const linkStyle = 'underline underline-offset-4 transition-colors hover:decoration-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 decoration-neutral-700'
 
 export default function Cars() {
   return (
@@ -26,7 +26,7 @@ export default function Cars() {
         <h1 className="font-sans text-5xl font-bold tracking-tighter">
           <SectionText title='cars'/>
         </h1>
-        <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight dark:text-neutral-400">
+        <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight text-neutral-400">
           This is my 2003 Mazda Miata, a project I bought in the heat of summer
           &apos;23. An ongoing project, and a good excuse to step away from a screen.
         </p>
@@ -53,16 +53,16 @@ export default function Cars() {
         <div className="mt-8 grid gap-8 sm:grid-cols-[2fr_1fr] sm:gap-12">
           <div className={bodyText + ' space-y-5'}>
             <p>
-              One of my favorite things about building a car is that <strong className='dark:text-neutral-300'>there isn't one correct way to do it.</strong> There are countless styles and directions you can take, and I've always argued that <strong className='dark:text-neutral-300'>pulling ideas from several styles</strong> rather than fitting the car into one category is a lot more satisfying. A lot of that inspiration comes from friends, and the shows I attend. The goal is something cohesive, but still <strong className='dark:text-neutral-300'>distinctly mine.</strong>
+              One of my favorite things about building a car is that <strong className='text-neutral-300'>there isn't one correct way to do it.</strong> There are countless styles and directions you can take, and I've always argued that <strong className='text-neutral-300'>pulling ideas from several styles</strong> rather than fitting the car into one category is a lot more satisfying. A lot of that inspiration comes from friends, and the shows I attend. The goal is something cohesive, but still <strong className='text-neutral-300'>distinctly mine.</strong>
             </p>
-            <p> A lot of my inspiration comes from the <strong className='dark:text-neutral-300'>Japanese tuner cars of the 1990s and 2000s.</strong> I love the wheels, fitment, colors, graphics, and little details that gave cars from that era so much personality. I want the Miata to feel like something that <em>could</em> have existed in that period without trying to make it a perfect time capsule. Other choices are completely personal, and that's part of the fun.
+            <p> A lot of my inspiration comes from the <strong className='text-neutral-300'>Japanese tuner cars of the 1990s and 2000s.</strong> I love the wheels, fitment, colors, graphics, and little details that gave cars from that era so much personality. I want the Miata to feel like something that <em>could</em> have existed in that period without trying to make it a perfect time capsule. Other choices are completely personal, and that's part of the fun.
             </p>
-            <p> At the same time, <strong className='dark:text-neutral-300'>I still want to actually drive the car.</strong> I love aggressive fitment and low cars, but I don't want something I'm afraid to take down a back road because of a bump in the pavement. I want the stance I'm looking for while still being able to throw it into a corner, take a long drive, or enjoy the car without sacrificing my oil pan.
+            <p> At the same time, <strong className='text-neutral-300'>I still want to actually drive the car.</strong> I love aggressive fitment and low cars, but I don't want something I'm afraid to take down a back road because of a bump in the pavement. I want the stance I'm looking for while still being able to throw it into a corner, take a long drive, or enjoy the car without sacrificing my oil pan.
             </p>
-            <p> <strong className='dark:text-neutral-300'>My philosophy is still form &gt; function</strong>. I'm willing to sacrifice some practicality for the look I want, but never enough that the car stops being enjoyable. A happy medium is what I'm after: something inspired by the tuner culture I grew up loving, something unmistakably mine, and something I can still grab the keys to and drive.
+            <p> <strong className='text-neutral-300'>My philosophy is still form &gt; function</strong>. I'm willing to sacrifice some practicality for the look I want, but never enough that the car stops being enjoyable. A happy medium is what I'm after: something inspired by the tuner culture I grew up loving, something unmistakably mine, and something I can still grab the keys to and drive.
             </p>
           </div>
-          <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t border-neutral-200 pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 dark:border-neutral-800">
+          <aside aria-label="Sample photos illustrating my car philosophy" className="grid grid-cols-3 gap-3 border-t pt-5 sm:flex sm:flex-col sm:justify-between sm:gap-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0 border-neutral-800">
             <Image
               src="/cars/square1.jpg"
               alt="first iterated version of the miata. on stock wheels, in front of a nice well lit siding of a building."
@@ -112,15 +112,15 @@ export default function Cars() {
           ))}
         </div>
 
-        <details open className="my-16 border-y border-neutral-200 dark:border-neutral-800">
+        <details open className="my-16 border-y border-neutral-800">
           <summary className="cursor-pointer py-5 font-mono text-sm focus-visible:outline focus-visible:outline-offset-4">
             the parts list
           </summary>
           <dl className="pb-5 font-mono text-sm leading-6">
             {partsList.map((part) => (
-              <div key={part.category} className="grid gap-1 border-t border-neutral-200 py-3 sm:grid-cols-[1fr_2fr] sm:gap-6 dark:border-neutral-800">
+              <div key={part.category} className="grid gap-1 border-t py-3 sm:grid-cols-[1fr_2fr] sm:gap-6 border-neutral-800">
                 <dt>{part.category}</dt>
-                <dd className="text-neutral-600 dark:text-neutral-400">{part.detail}</dd>
+                <dd className=" text-neutral-400">{part.detail}</dd>
               </div>
             ))}
           </dl>

@@ -26,7 +26,7 @@ export default function Photos() {
               }/>
           </h1>
 
-          <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight dark:text-neutral-400">
+          <p className="mt-8 max-w-3xl font-mono text-xl leading-8 tracking-tight text-neutral-400">
             A collection of photos I&apos;ve taken. Shot on Sony a6400
             and iPhone.
           </p>

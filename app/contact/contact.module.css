@@ -1,8 +1,8 @@
 .page {
-  --contact-text: #171717;
-  --contact-muted: #656565;
-  --contact-border: #d4d4d4;
-  --contact-hover: #f5f5f5;
+  --contact-text: #ededed;
+  --contact-muted: #a3a3a3;
+  --contact-border: #333;
+  --contact-hover: #141414;
   padding-bottom: 48px;
 }
 
@@ -51,7 +51,7 @@
 .label { display: block; font-size: 12px; color: var(--contact-muted); }
 .linkTitle { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
 .linkTitle h3 { font-size: 32px; line-height: 1.2; font-weight: 600; color: var(--contact-text); }
-.icon { flex: none; filter: invert(1); }
+.icon { flex: none; }
 .svgIcon { width: 28px; height: 28px; flex: none; }
 .linkDescription { margin-top: 12px; max-width: 360px; font-size: 13px; line-height: 1.7; color: var(--contact-muted); overflow-wrap: anywhere; }
 
@@ -86,16 +86,6 @@
   .link { grid-template-columns: minmax(0, 1fr) auto; }
   .number { display: none; }
   .linkTitle h3 { font-size: 28px; }
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --contact-text: #ededed;
-    --contact-muted: #a3a3a3;
-    --contact-border: #333;
-    --contact-hover: #141414;
-  }
-  .icon { filter: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

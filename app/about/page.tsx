@@ -111,22 +111,22 @@ export default async function About() {
         <p className='font-mono text-xl tracking-tight mt-8'>
           languages
           <ArrowRightIcon className='size-5 mx-3 inline'/>
-          <span className='dark:text-neutral-400 tracking-tighter'>js / ts / python / c++ / dart / html / css</span>
+          <span className='text-neutral-400 tracking-tighter'>js / ts / python / c++ / dart / html / css</span>
         </p>
         <p className='font-mono text-xl tracking-tight mt-4'>
           frameworks
           <ArrowRightIcon className='size-5 mx-3 inline'/>
-          <span className='dark:text-neutral-400 tracking-tighter'>react / ionic / next.js / tailwind / bootstrap / node.js / express.js</span>
+          <span className='text-neutral-400 tracking-tighter'>react / ionic / next.js / tailwind / bootstrap / node.js / express.js</span>
         </p>
         <p className='font-mono text-xl tracking-tight mt-4'>
           databases
           <ArrowRightIcon className='size-5 mx-3 inline'/>
-          <span className='dark:text-neutral-400 tracking-tighter'>mysql / mariadb / mongodb</span>
+          <span className='text-neutral-400 tracking-tighter'>mysql / mariadb / mongodb</span>
         </p>
         <p className='font-mono text-xl tracking-tight mt-4'>
           tools
           <ArrowRightIcon className='size-5 mx-3 inline'/>
-          <span className='dark:text-neutral-400 tracking-tighter'>vscode / codex / figma</span>
+          <span className='text-neutral-400 tracking-tighter'>vscode / codex / figma</span>
         </p>
       </div>
     </main>

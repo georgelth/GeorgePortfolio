@@ -6,7 +6,7 @@ export default function ExternalLink({ href, children }: { href: string; childre
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex min-h-11 items-center gap-1 font-mono text-sm text-neutral-600 underline-offset-4 transition-colors hover:text-neutral-950 hover:underline focus-visible:outline focus-visible:outline-offset-4 dark:text-neutral-400 dark:hover:text-white"
+      className="group inline-flex min-h-11 items-center gap-1 font-mono text-sm underline-offset-4 transition-colors hover:underline focus-visible:outline focus-visible:outline-offset-4 text-neutral-400 hover:text-white"
     >
       {children}
       <ArrowUpRightIcon

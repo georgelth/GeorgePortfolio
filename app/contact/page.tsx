@@ -60,7 +60,7 @@ export default function Contact() {
           <h2 className={`font-sans text-4xl font-bold tracking-tighter`}>
             have something<br />in mind?
           </h2>
-          <p className={`font-mono tracking-tight dark:text-neutral-400`}>
+          <p className={`font-mono tracking-tight text-neutral-400`}>
             A project, an opportunity, or just a hello. I&apos;d love to hear
             what you&apos;re thinking about.
           </p>

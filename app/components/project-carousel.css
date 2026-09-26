@@ -86,7 +86,7 @@ html { container-type: inline-size; }
   font-variant-numeric: tabular-nums;
 }
 
-.project-carousel__current { color: #171717; }
+.project-carousel__current { color: #e5e5e5; }
 
 @media (max-width: 600px) {
   .project-carousel__viewport {
@@ -98,5 +98,4 @@ html { container-type: inline-size; }
 }
 
 @media (hover: none) { .project-carousel__arrow { opacity: 1; } }
-@media (prefers-color-scheme: dark) { .project-carousel__current { color: #e5e5e5; } }
 @media (prefers-reduced-motion: reduce) { .project-carousel__arrow { transition: none; } }
